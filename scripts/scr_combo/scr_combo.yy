@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_combo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_combo",
+  "parent":{
+    "name":"gameplay",
+    "path":"folders/scripts/gameplay.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
