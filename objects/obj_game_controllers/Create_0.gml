@@ -59,9 +59,6 @@ update_combo = function(right) {
 check_answer = function(answer) {
 	answer_result = scr_check_answer(current_base, answer);	
 	last_base = answer;
-	current_base = scr_next_base(base);   // gera nova base
-	current_base_target = current_base;   // define o alvo da transição
-	base_transition_timer = 0;
 	return answer_result;
 }
 

@@ -2,7 +2,7 @@ var gw = display_get_gui_width();
 var gh = display_get_gui_height();
 
 _x = gw * 0.5; // centro da tela de acordo com a largura do display
-_y = gh * 0.30; // centro da tela de acordo com a altura do display
+_y = gh * 0.5; // centro da tela de acordo com a altura do display
 
 var target_width = gw * 0.91;
 

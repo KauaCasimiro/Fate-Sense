@@ -30,6 +30,8 @@ function scr_flow_game(){
 					show_debug_message("Correto");
 					current_base = scr_next_base(base);
 					current_base_feedback = current_base;
+					current_base_target = current_base;
+					base_transition_timer = 0;
 					feedback_timer = 0;
 				} else {
 					show_debug_message("Errado");
