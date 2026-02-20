@@ -29,6 +29,8 @@ function scr_flow_game(){
 					update_combo(true);
 					show_debug_message("Correto");
 					current_base = scr_next_base(base);
+					current_base_feedback = current_base;
+					feedback_timer = 0;
 				} else {
 					show_debug_message("Errado");
 					//game_state = game_State.Game_over
