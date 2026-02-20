@@ -1,3 +1,7 @@
+if (!scr_game_is_playing()) {
+	exit;
+}
+
 switch (state) { 
 	case "idle":
 

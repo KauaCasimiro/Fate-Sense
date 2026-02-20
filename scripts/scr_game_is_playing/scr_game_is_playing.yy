@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_game_is_playing",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_game_is_playing",
+  "parent":{
+    "name":"utility",
+    "path":"folders/scripts/utility.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
