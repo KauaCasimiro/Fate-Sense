@@ -42,11 +42,13 @@ combo_streak = 0;
 max_timer = 5;
 timer_combo = max_timer;
 
-/*base_map = ds_map_create();
-ds_map_add(base_map, "A", spr_button_A);
-ds_map_add(base_map, "T", spr_button_T);
-ds_map_add(base_map, "G", spr_button_G);
-ds_map_add(base_map, "C", spr_button_C);*/	
+function get_run_results() {
+	return {
+		time: timer,
+		_score_: _score,
+		max_combo: combo_streak
+	};
+}
 
 last_base = undefined;
 feedback_timer = 0;

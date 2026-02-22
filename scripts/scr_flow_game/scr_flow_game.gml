@@ -50,12 +50,16 @@ function scr_flow_game(){
 		break;
 		
 		case game_State.Game_over:
-			game_state = game_State.Tutorial;
-			timer = 0;
-			repairs = 2;
-			_score = 0;
-			combo_streak = 0;
-			timer_combo = max_timer;
+			if (!instance_exists(obj_popup_end)) {
+				instance_create_layer(0, 0, "Instance_UI", obj_popup_end);
+				show_debug_message("Estado Atual: Ending");
+				timer = 0;
+				repairs = 2;
+				_score = 0;
+				combo_streak = 0;
+				timer_combo = max_timer;
+			}
+				
 		break;
 		
 		default:

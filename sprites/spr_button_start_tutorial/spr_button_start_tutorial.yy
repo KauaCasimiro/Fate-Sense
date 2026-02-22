@@ -22,14 +22,14 @@
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"dd0b99f6-b52d-49a9-bfaa-660f5ce60e37","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"dd0b99f6-b52d-49a9-bfaa-660f5ce60e37","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"a51e63a9-8d70-46db-a32b-3c4b4f0dff60","blendMode":0,"displayName":"default","isLocked":true,"name":"a51e63a9-8d70-46db-a32b-3c4b4f0dff60","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"a51e63a9-8d70-46db-a32b-3c4b4f0dff60","blendMode":0,"displayName":"default","isLocked":false,"name":"a51e63a9-8d70-46db-a32b-3c4b4f0dff60","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_button_start_tutorial",
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"ui",
-    "path":"folders/sprites/ui.yy",
+    "name":"buttons",
+    "path":"folders/sprites/buttons.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -17,7 +17,7 @@ if (inside && !mouse_was_inside) {
 
 mouse_was_inside = inside;
 
-if (button_state = 1) {
+if (button_state == 1) {
 	button_anim_frame += button_anim_speed;
 	
 	if (button_anim_frame >= 3) {
