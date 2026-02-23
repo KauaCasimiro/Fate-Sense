@@ -57,6 +57,7 @@ function scr_flow_game(){
 				repairs = 2;
 				_score = 0;
 				combo_streak = 0;
+				max_combo = 0;
 				timer_combo = max_timer;
 			}
 				

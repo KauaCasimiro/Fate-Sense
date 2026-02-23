@@ -27,13 +27,10 @@ function scr_combo(right){
 		timer_combo = max_timer;
 	} else {
 			show_debug_message("Errou e não pontuou: " + string(_score))
-			/*if (combo_streak > 0) {
-				timer_combo -= delta_time / 1000000;
-				if (timer_combo <= 0) {
-					combo_streak = 0;
-					timer_combo = 0;
-					show_debug_message("Sequência de combo perdida");
-				}
-			}*/	
+			
+	}
+	
+	if (combo_streak > max_combo) {
+		max_combo = combo_streak;
 	}
 }

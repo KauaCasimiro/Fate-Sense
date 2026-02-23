@@ -28,7 +28,3 @@ if (button_state == 1) {
 		instance_destroy();
 	}
 }
-
-/*show_debug_message("Popup _x/_y: " + string(_x) + "," + string(_y));
-show_debug_message("target_width/height: " + string(target_width) + "," + string(target_height));
-show_debug_message("xscale/yscale: " + string(xscale) + "," + string(yscale));*/

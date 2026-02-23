@@ -43,6 +43,7 @@
   "name":"Helix Link",
   "resources":[
     {"id":{"name":"fnt_combo","path":"fonts/fnt_combo/fnt_combo.yy",},},
+    {"id":{"name":"fnt_hud_1","path":"fonts/fnt_hud_1/fnt_hud_1.yy",},},
     {"id":{"name":"fnt_hud","path":"fonts/fnt_hud/fnt_hud.yy",},},
     {"id":{"name":"fnt_main","path":"fonts/fnt_main/fnt_main.yy",},},
     {"id":{"name":"obj_base_display","path":"objects/obj_base_display/obj_base_display.yy",},},

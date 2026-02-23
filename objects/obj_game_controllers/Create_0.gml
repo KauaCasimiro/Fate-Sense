@@ -39,6 +39,7 @@ repairs = 2;
 // Variavéis para o combo
 _score  = 0;
 combo_streak = 0;
+max_combo = 0;
 max_timer = 5;
 timer_combo = max_timer;
 
@@ -46,7 +47,7 @@ function get_run_results() {
 	return {
 		time: timer,
 		_score_: _score,
-		max_combo: combo_streak
+		combo: max_combo
 	};
 }
 

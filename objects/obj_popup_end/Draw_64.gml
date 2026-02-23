@@ -21,20 +21,20 @@ var y_title = popup_top + (popup_height * 0.30);
 var x_stats = popup_left + (popup_width * 0.10);
 var y_stats = y_title + 40;
 
-draw_set_font(fnt_hud);
+draw_set_font(fnt_hud_1);
 draw_set_colour(c_black);
-var title = "Estatísticas da Partida";
+var title = "Resumo da Partida";
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
 draw_text(_x, y_title, title);
 
 var stats = 
-"Tempo da run: " + string(final_time) + "\n" +
-"Pontuação: " + string(final_score) +  "\n" +
-"Maior Combo: " + string(final_combo);
+"Tempo da partida: " + string(final_time) + "\n" +
+"Pontos: " + string(final_score) +  "\n" +
+"Maior Combo da partida: " + string(final_combo);
 
 draw_set_halign(fa_left);
-var line_h = string_height("A") + 12;
+var line_h = string_height("A") + 25;
 draw_text_ext(x_stats, y_stats, stats, line_h, -1);
 
 draw_set_colour(c_white);

@@ -31,12 +31,12 @@ draw_set_font(fnt_hud);
 
 if (current_base_displayed != "") {
 	var current_sprite = base_map[? current_base_displayed];
-	draw_sprite_ext(current_sprite, 0, gw/2.1, gh/2.571, 2.2,2.4, 0, c_white,1);
+	draw_sprite_ext(current_sprite, 0, gw/2.1, gh/2.39, 2.39, 2.8, 0, c_white,1);
 }
 
 if (last_base != undefined) {
 	var sprite_answer = base_map[? last_base];
-	draw_sprite_ext(sprite_answer, 0, gw/1.74, gh/2.571, 2.2, 2.4, 0, c_white, 1);
+	draw_sprite_ext(sprite_answer, 0, gw/1.72, gh/2.39, 2.39, 2.7, 0, c_white, 1);
 }
 
 draw_set_halign(fa_left);

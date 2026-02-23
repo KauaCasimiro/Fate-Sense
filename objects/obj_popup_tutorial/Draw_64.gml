@@ -15,6 +15,37 @@ popup_height = sprite_get_height(spr_tutorial) * popup_scale;
 popup_bottom = _y + popup_height * 0.5;
 popup_top = _y - popup_height * 0.5;
 
+popup_left = _x  - popup_width * 0.5;
+var y_title = popup_top + (popup_width * 0.28);
+
+var x_msg = popup_left + (popup_width * 0.10);
+var y_msg = y_title + 40;
+
+draw_set_font(fnt_hud);
+draw_set_colour(c_black);
+var title = "Como Jogar";
+draw_set_halign(fa_center);
+draw_set_valign(fa_top);
+draw_text(_x, y_title, title);
+
+var msg =
+"Conecte as bases nitrogenadas corretamente:" + "\n" +
+"A <=> T | G <=> C" + "\n" +
+"Cada pareamento correto gera 1 ponto" + "\n" + 
+"Acerte em 5 segundos para gerar um combo!" + "\n" +
+"Voce tem 2 enzimas reparadoras" + "\n" + 
+"Elas podem corrigir pareamentos incorretos" + "\n" +
+"Boa Sorte!";
+
+draw_set_halign(fa_center);
+//draw_set_valign(fa_middle);
+var line_h = string_height("A") + 25;
+draw_text_ext(_x, y_msg, msg, line_h, -1);
+
+draw_set_colour(c_white);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+
 button_scale = 8;
 button_width = sprite_get_width(spr_button_start_tutorial) * button_scale;
 button_height = sprite_get_height(spr_button_start_tutorial) * button_scale;
