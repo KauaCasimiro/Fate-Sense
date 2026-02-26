@@ -42,22 +42,28 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
 button_scale = 8;
-button_width = sprite_get_width(spr_button_start_tutorial) * button_scale;
-button_height = sprite_get_height(spr_button_start_tutorial) * button_scale;
-button_x = _x * 1.14;
-var padding = 20;
-button_y = popup_bottom - padding - button_height * 1.6;
 
-button_w = sprite_get_width(spr_button_exit) * button_scale;
-button_h = sprite_get_height(spr_button_exit) * button_scale;
-button_X = _x * 0.15;
-button_Y = popup_bottom - padding - button_h * 1.6;
-
-if (button_state == 0) {
-	frame = 0;
-} else {
-	frame = floor(button_anim_frame);
+for (var i = 0; i < array_length(options); i++) {
+	var btn = options[i];
+	var percent  = 0.25 + i * 0.5;
+	
+	var sprite = btn.sprite;
+	var width = sprite_get_width(sprite) * button_scale;
+	var height = sprite_get_height(sprite) * button_scale
+	var padding = 20;
+	
+	var button_x = popup_left + popup_width * percent;
+	var button_y = popup_bottom - padding - height * 1.6;
+	
+	var frame;
+	if (i == selected_index && button_state == 1) {
+		frame = floor(button_anim_frame);
+	} else {
+		frame = 0;
+	}
+	
+	draw_sprite_ext(sprite, frame, button_x, button_y, button_scale, button_scale, 0, c_white, 1);
 }
 
-draw_sprite_ext(spr_button_start_tutorial, frame, button_x, button_y, button_scale, button_scale, 0, c_white, 1);
-draw_sprite_ext(spr_button_exit, frame, button_X, button_Y, button_scale, button_scale, 0, c_white, 1);
+draw_set_alpha(1);
+draw_set_colour(c_white);

@@ -1,10 +1,10 @@
 var mx = device_mouse_x_to_gui(0);
 var my = device_mouse_y_to_gui(0);
 
-var left = button_x - button_width * 0.7;
-var right = button_x + button_width * 0.7;
-var top = button_y - button_height * 0.7;
-var bottom = button_y + button_height * 0.7;
+var left = button_x - button_width * 0.5;
+var right = button_x + button_width * 0.5;
+var top = button_y - button_height * 0.5;
+var bottom = button_y + button_height * 0.5;
 
 if (point_in_rectangle(mx, my, left, top, right, bottom)) {
 	show_debug_message("Clicou dentro do botão");

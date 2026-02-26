@@ -49,9 +49,9 @@ draw_set_valign(fa_top);
 button_scale = 8;
 button_width = sprite_get_width(spr_button_start_tutorial) * button_scale;
 button_height = sprite_get_height(spr_button_start_tutorial) * button_scale;
-button_x = _x * 0.65;
+button_x = _x;
 var padding = 20;
-button_y = popup_bottom - padding - button_height * 1.6;
+button_y = popup_bottom - padding - button_height;
 
 if (button_state == 0) {
 	frame = 0;

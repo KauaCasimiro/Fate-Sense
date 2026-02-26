@@ -4,6 +4,26 @@ button_anim_speed = 1;
 mouse_was_inside = false;
 mouse_was_inside_ext = false;
 
+selected_index = -1;
+
+options = [
+	{
+		sprite: spr_button_start_tutorial,
+		action: function() {
+			with(obj_game_controllers) {
+				game_state = game_State.Transition;
+			}
+		}
+	},
+	
+	{
+		sprite: spr_button_exit,
+		action: function () {
+			game_end();
+		}
+	}
+];
+
 var controller = instance_find(obj_game_controllers, 0);
 
 if (controller != noone) {
