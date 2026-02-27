@@ -1,6 +1,6 @@
 function scr_flow_game(){
 	
-	switch (game_state) {
+	switch (global.game_state) {
 		case game_State.Tutorial:
 			// Bloco que vai chamar o pop-up de tutorial
 			if (!instance_exists(obj_popup_tutorial)) {
@@ -18,7 +18,7 @@ function scr_flow_game(){
 			if (transition_timer >= transition_duration) {
 				show_debug_message("Estado atual: Transição");
 				transition_timer = 0;
-				game_state = game_State.Playing;
+				global.game_state = game_State.Playing;
 			}
 		break;
 		
@@ -27,6 +27,9 @@ function scr_flow_game(){
 			if (answer_result != undefined) {
 				if (answer_result) {
 					update_combo(true);
+					with(obj_audio_manager) {
+						play_sfx(sfx_bnt_game);
+					}
 					show_debug_message("Correto");
 					current_base = scr_next_base(base);
 					current_base_feedback = current_base;
@@ -35,13 +38,15 @@ function scr_flow_game(){
 					feedback_timer = 0;
 				} else {
 					show_debug_message("Errado");
-					//game_state = game_State.Game_over
-					
+					//global.game_state = global.game_state.Game_over
+					with(obj_audio_manager) {
+						play_sfx(sfx_bnt_game_wrong);
+					}
 					repairs--;
 					update_combo(false);
 					answer_result = undefined;
 						if (repairs <= 0) {
-						game_state = game_State.Game_over;
+						global.game_state = game_State.Game_over;
 					}
 				}
 			answer_result = undefined;

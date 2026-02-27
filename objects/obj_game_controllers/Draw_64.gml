@@ -1,4 +1,4 @@
-if (game_state == game_State.Transition) {
+if (global.game_state ==game_State.Transition) {
 	var seconds_left = ceil(transition_duration - transition_timer) - 1;
 	
 	draw_set_halign(fa_center);

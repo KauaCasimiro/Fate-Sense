@@ -1,15 +1,15 @@
 enum game_State {
-	Tutorial,
-	Transition,
-	Playing,
-	Game_over
+    Tutorial,
+    Transition,
+    Playing,
+    Game_over
 }
 
 if (!variable_global_exists("tutorial_done")) {
 	global.tutorial_done = false;
 }
 
-game_state = global.tutorial_done ? game_State.Playing : game_State.Tutorial;
+global.game_state = global.tutorial_done ? game_State.Playing :game_State.Tutorial;
 
 transition_timer = 0;
 transition_duration = 4;

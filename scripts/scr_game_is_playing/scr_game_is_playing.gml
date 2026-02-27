@@ -3,7 +3,7 @@
 function scr_game_is_playing(){
 	var controller = instance_find(obj_game_controllers, 0);
 		if (controller != noone) {
-			return (controller.game_state == game_State.Playing);
+			return (global.game_state == game_State.Playing);
 		} else {
 			return false;
 		}

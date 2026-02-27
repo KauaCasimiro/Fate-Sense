@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_audio_update",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_audio_update",
+  "parent":{
+    "name":"utility",
+    "path":"folders/scripts/utility.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

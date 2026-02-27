@@ -7,6 +7,9 @@ var top = button_y - button_height * 0.5;
 var bottom = button_y + button_height * 0.5;
 
 if (point_in_rectangle(mx, my, left, top, right, bottom)) {
+	with(obj_audio_manager) {
+			play_sfx(sfx_bnt_ui);
+		}
 	show_debug_message("Clicou dentro do botão");
 	button_state = 1;
 	button_anim_frame = 0;

@@ -22,7 +22,7 @@ if (button_state == 1) {
 	
 	if (button_anim_frame >= 3) {
 		with(obj_game_controllers) {
-			game_state = game_State.Transition;
+			global.game_state = game_State.Transition;
 		}
 		global.tutorial_done = true;
 		instance_destroy();

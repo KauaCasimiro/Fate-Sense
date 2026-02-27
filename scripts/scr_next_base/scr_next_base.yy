@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_next_base",
   "parent":{
-    "name":"gameplay",
-    "path":"folders/scripts/gameplay.yy",
+    "name":"utility",
+    "path":"folders/scripts/utility.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

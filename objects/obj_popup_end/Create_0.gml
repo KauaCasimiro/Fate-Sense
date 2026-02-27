@@ -10,8 +10,11 @@ options = [
 	{
 		sprite: spr_button_start_tutorial,
 		action: function() {
+			with(obj_audio_manager) {
+			play_sfx(sfx_bnt_ui);
+		}
 			with(obj_game_controllers) {
-				game_state = game_State.Transition;
+				global.game_state = game_State.Transition;
 			}
 		}
 	},
@@ -19,6 +22,9 @@ options = [
 	{
 		sprite: spr_button_exit,
 		action: function () {
+			with(obj_audio_manager) {
+			play_sfx(sfx_bnt_ui);
+		}
 			game_end();
 		}
 	}
