@@ -1,26 +1,30 @@
-# Helix Link
+# Fate Sense
 
-**Helix Link** is a mobile serious game developed in GameMaker, focused on teaching DNA base pairing (A–T, C–G) through a reaction-time mechanic and combo system.
-
-Developed as part of the Shark Camp project.
+**Fate Sense** is a mobile game focused on learning, developed in GameMaker, centered on interpreting symbolic meanings through card-based gameplay inspired by traditional Lenormand-style card reading systems.
 
 ---
 
 ## Objective
 
-Reinforce correct pairing of nitrogenous bases through fast interaction and minimal visual feedback.
+Help players understand symbolic card meanings through association, interpretation, and feedback-driven gameplay.
 
 ## Platform
 
-- Android
+- Android  
 - Developed in GameMaker (GML)
 
 ## Gameplay
 
-- Display a base
-- Select the correct complementary base
-- Combo system for consecutive fast correct answers
-- Mistakes end the current run
+- A card is presented to the player  
+- The player selects the correct meaning or interpretation  
+- Immediate feedback reinforces understanding  
+- Incorrect choices end the current run  
+
+## Features
+
+- Symbol-based learning system  
+- Interpretation-driven gameplay  
+- Fast feedback loop for learning and retention  
 
 ## Status
 
@@ -34,27 +38,25 @@ MIT
 
 ## Português (Brazilian Portuguese)
 
-# Helix Link
+# Fate Sense
 
-**Helix Link** é um jogo sério mobile desenvolvido em GameMaker, com foco no ensino das ligações do DNA (A–T, C–G) através de mecânicas baseadas em tempo de reação e sistema de combo.
-
-Desenvolvido para o projeto Shark Camp.
+**Fate Sense** é um jogo mobile com foco em aprendizado desenvolvido em GameMaker, voltado à interpretação de símbolos por meio de cartas, inspirado no baralho cigano (estilo Lenormand) e em sistemas tradicionais de leitura.
 
 ## Objetivo
 
-Reforçar o pareamento correto das bases nitrogenadas por meio de interação rápida e feedback visual minimalista.
+Ajudar o jogador a compreender o significado de cartas simbólicas por meio de associação, interpretação e feedback.
 
 ## Plataforma
 
-- Android
+- Android  
 - Desenvolvido em GameMaker (GML)
 
 ## Mecânica
 
-- Exibição de uma base
-- Seleção da base complementar correta
-- Sistema de combo por acertos rápidos consecutivos
-- Erro encerra a rodada atual
+- Uma carta é apresentada ao jogador  
+- O jogador escolhe o significado ou interpretação correta  
+- Feedback imediato reforça a compreensão  
+- Erros encerram a rodada atual  
 
 ## Status
 
