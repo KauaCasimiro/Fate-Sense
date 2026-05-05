@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_game_is_playing",
+  "%Name":"scr_init_cards",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_game_is_playing",
+  "name":"scr_init_cards",
   "parent":{
     "name":"utility",
     "path":"folders/scripts/utility.yy",

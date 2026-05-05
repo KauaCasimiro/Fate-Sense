@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_next_base",
+  "%Name":"scr_cooldown_tracker_init",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_next_base",
+  "name":"scr_cooldown_tracker_init",
   "parent":{
     "name":"utility",
     "path":"folders/scripts/utility.yy",

@@ -13,7 +13,7 @@ options = [
 			with(obj_audio_manager) {
 			play_sfx(sfx_bnt_ui);
 		}
-			with(obj_game_controllers) {
+			with(obj_controller) {
 				global.game_state = game_State.Transition;
 			}
 		}
@@ -30,7 +30,7 @@ options = [
 	}
 ];
 
-var controller = instance_find(obj_game_controllers, 0);
+var controller = instance_find(obj_controller, 0);
 
 if (controller != noone) {
 	var results = controller.get_run_results();

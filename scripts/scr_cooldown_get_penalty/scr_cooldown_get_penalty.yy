@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_cooldown_get_penalty",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_cooldown_get_penalty",
+  "parent":{
+    "name":"utility",
+    "path":"folders/scripts/utility.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

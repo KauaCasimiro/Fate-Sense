@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_flow_game",
+  "%Name":"scr_cooldown_register",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_flow_game",
+  "name":"scr_cooldown_register",
   "parent":{
-    "name":"core",
-    "path":"folders/scripts/core.yy",
+    "name":"utility",
+    "path":"folders/scripts/utility.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

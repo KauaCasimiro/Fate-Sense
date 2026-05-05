@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_select_distractors",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_select_distractors",
+  "parent":{
+    "name":"core",
+    "path":"folders/scripts/core.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

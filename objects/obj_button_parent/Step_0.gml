@@ -1,7 +1,3 @@
-if (!scr_game_is_playing()) {
-	exit;
-}
-
 switch (state) { 
 	case "idle":
 
@@ -15,11 +11,9 @@ switch (state) {
 				state = "animating"
 				image_index = 0;
 				image_speed = 2;
-				var result = game_controller.check_answer(base_letter);
-				/*with(obj_audio_manager) {
-					play_sfx(sfx_bnt_game);
-				}*/
-				show_debug_message("Botão Pressionado: " + base_letter);
+				
+				game_controller.pending_input = option_index;
+				//show_debug_message("Botão Pressionado: " + base_letter);
 			}
 		}
 

@@ -21,7 +21,7 @@ if (button_state == 1) {
 	button_anim_frame += button_anim_speed;
 	
 	if (button_anim_frame >= 3) {
-		with(obj_game_controllers) {
+		with(obj_controller) {
 			global.game_state = game_State.Transition;
 		}
 		global.tutorial_done = true;

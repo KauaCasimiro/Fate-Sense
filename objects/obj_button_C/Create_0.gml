@@ -1,4 +1,4 @@
 // Inherit the parent event
 event_inherited();
 
-base_letter = "C";
+option_index = 1;
