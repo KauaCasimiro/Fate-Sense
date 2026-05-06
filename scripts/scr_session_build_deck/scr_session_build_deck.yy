@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_cooldown_next_round",
+  "%Name":"scr_session_build_deck",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_cooldown_next_round",
+  "name":"scr_session_build_deck",
   "parent":{
-    "name":"utility",
-    "path":"folders/scripts/utility.yy",
+    "name":"gameplay",
+    "path":"folders/scripts/gameplay.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

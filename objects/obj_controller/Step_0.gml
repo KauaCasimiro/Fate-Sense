@@ -25,13 +25,18 @@ switch (global.game_state) {
 
 
     case game_State.Playing:
+	
+		if (session_current >= session_total) {
+			global.game_state = game_State.Game_over;
+			break;
+		}
 
 
         // =====================================================
         // SETUP DA RODADA
         // =====================================================
-        if (current_round == undefined) {
-            current_round = scr_generate_question();
+        if (current_round == undefined && !in_feedback) {
+            current_round = scr_generate_question(session_deck, session_index);
             input_processed = false;
         }
 
@@ -42,65 +47,58 @@ switch (global.game_state) {
         // =====================================================
         // INPUT PROCESSING (UMA VEZ POR INPUT)
         // =====================================================
-        if (pending_input != undefined && !input_processed) {
+        if (pending_input != undefined && !input_processed && !in_feedback) {
 
-            var result = scr_check_answer(current_round, pending_input);
+		    var result = scr_check_answer(current_round, pending_input);
 
-            var combo_result = scr_combo(result, combo, timer_combo, max_timer);
+		    var combo_result = scr_combo(result, combo);
 
-            combo = combo_result.combo_streak;
-            _score += combo_result.score_increment;
-            timer_combo = combo_result.timer_combo;
+		    combo = combo_result.combo_streak;
+			combo_active = combo_result.combo_active;
+		    _score += combo_result.score_increment;
+			
+			if (combo > max_combo) {
+				max_combo = combo;
+			}
+				
+		    //timer_combo = combo_result.timer_combo;
 
+		    last_result = result;
 
-            // =========================
-            // FEEDBACK DE RESULTADO
-            // =========================
-            if (result) {
+		    // ativa estado de feedback
+		    in_feedback = true;
+		    feedback_timer = 0;
 
-                with (obj_audio_manager) {
-                    play_sfx(sfx_bnt_game);
-                }
+		    // =========================
+		    // SFX
+		    // =========================
+		    if (result) {
+		        with (obj_audio_manager) {
+		            play_sfx(sfx_bnt_game);
+		        }
+		    } else {
+		        _lives--;
 
-            } else {
+		        with (obj_audio_manager) {
+		            play_sfx(sfx_bnt_game_wrong);
+		        }
 
-                _lives--;
+		        if (_lives <= 0) {
+		            global.game_state = game_State.Game_over;
+		        }
+		    }
 
-                with (obj_audio_manager) {
-                    play_sfx(sfx_bnt_game_wrong);
-                }
-
-                if (_lives <= 0) {
-                    global.game_state = game_State.Game_over;
-                }
-            }
-
-
-            input_processed = true;
-        }
-
+		    input_processed = true;
+		}
 
         // =====================================================
         // RESET DA RODADA
         // =====================================================
-        if (input_processed) {
+        /*if (input_processed) {
             current_round = undefined;
             pending_input = undefined;
             input_processed = false;
-        }
-
-
-        // =====================================================
-        // TIMER DE COMBO (ESTADO CONTÍNUO)
-        // =====================================================
-        if (combo > 0) {
-            timer_combo -= dt;
-
-            if (timer_combo <= 0) {
-                combo = 0;
-                timer_combo = 0;
-            }
-        }
+        }*/
 
     break;
 
@@ -114,14 +112,21 @@ switch (global.game_state) {
 
 
 // =====================================================
-// FEEDBACK TIMER (UI TEMPORAL)
+// FEEDBACK STATE (RODA TODO FRAME)
 // =====================================================
+if (in_feedback) {
+	feedback_timer += dt;
 
-if (pending_input != undefined) {
-    feedback_timer += dt;
-
-    if (feedback_timer >= feedback_duration) {
-        pending_input = undefined;
-        feedback_timer = 0;
-    }
+	if (feedback_timer >= feedback_duration) {
+		
+		scr_cooldown_next_round();
+		
+		current_round = undefined;
+		pending_input = undefined;
+		input_processed = false;
+		in_feedback = false;
+		
+		session_index += 1;
+		session_current += 1;
+	}
 }

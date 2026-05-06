@@ -1,3 +1,8 @@
+randomize();
+
+scr_cooldown_tracker_init();
+scr_init_cards();
+
 enum game_State {
     Tutorial,
     Transition,
@@ -11,7 +16,7 @@ transition_timer = 0;
 transition_duration = 4;
 
 feedback_timer = 0;
-feedback_duration = 0.5
+feedback_duration = 1.0
 
 round_timer = 0;
 
@@ -21,16 +26,20 @@ input_processed = undefined;
 
 _score = 0;
 combo = 0;
+combo_active = false;
 max_combo = 0;
 _lives = 2;
 
 max_timer = 5;
-timer_combo = 0;
 
 game_started = false;
 tutorial_done = false;
 
-randomize();
+in_feedback = false;
 
-scr_cooldown_tracker_init();
-scr_init_cards();
+session_index = 0;
+session_total = 5;
+session_current = 0;
+session_deck = scr_session_build_deck(session_total);
+
+

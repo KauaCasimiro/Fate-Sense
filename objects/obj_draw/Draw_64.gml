@@ -59,10 +59,14 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_font(fnt_combo);
 
-draw_text(40, 40, "Tempo: " + string(controller.round_timer, 0, 1));
+draw_text(40, 40, "Sessão: " + string(controller.session_current + 1) + " / " + string(controller.session_total));
 draw_text(40, 100, "Score: " + string(controller._score));
-draw_text(40, 160, "Combo: " + string(controller.combo));
-draw_text(40, 220, "Timer Combo: " + string(controller.timer_combo, 0, 1));
+draw_text(40, 160, "Combo: ");
+if (controller.combo_active) {
+	draw_set_color(c_yellow);
+	draw_text(200, 160, string(controller.combo) + "x" );
+	draw_set_color(c_white)
+}
 
 
 // =====================================================

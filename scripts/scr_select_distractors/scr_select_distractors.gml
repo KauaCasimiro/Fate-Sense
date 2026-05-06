@@ -1,6 +1,5 @@
-function scr_select_distractors(correct_card) {
+function scr_select_distractors(pool, correct_card, amount) {
 
-    var pool = scr_get_pool_cards(correct_card);
     var result_list = [];
 
     // 1. BUILD (calcular score de cada candidato)
@@ -47,10 +46,14 @@ function scr_select_distractors(correct_card) {
 
     // 3. SELEÇÃO DOS DISTRATORES (TOP 3)
     var distractors = [];
+	var _max = min(amount, array_length(result_list))
 
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < _max; i++) {
         array_push(distractors, result_list[i].card);
     }
 
-    return distractors;
+    return {
+		_distractors: distractors,
+		_result_list: result_list
+	}; 
 }

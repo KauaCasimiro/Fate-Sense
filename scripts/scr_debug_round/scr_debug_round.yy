@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_cooldown_register",
+  "%Name":"scr_debug_round",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_cooldown_register",
+  "name":"scr_debug_round",
   "parent":{
     "name":"utility",
     "path":"folders/scripts/utility.yy",
