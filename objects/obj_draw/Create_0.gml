@@ -1,0 +1,1 @@
+controller = instance_find(obj_controller, 0);

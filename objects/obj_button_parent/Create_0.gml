@@ -5,3 +5,4 @@ game_controller = instance_find(obj_controller, 0);
 option_index = 0;
 state = "idle";
 
+was_inside = false;

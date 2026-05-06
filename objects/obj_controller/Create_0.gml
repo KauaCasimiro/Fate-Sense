@@ -24,7 +24,13 @@ combo = 0;
 max_combo = 0;
 _lives = 2;
 
+max_timer = 5;
+timer_combo = 0;
+
 game_started = false;
 tutorial_done = false;
 
+randomize();
+
 scr_cooldown_tracker_init();
+scr_init_cards();

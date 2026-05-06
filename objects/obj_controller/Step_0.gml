@@ -46,7 +46,7 @@ switch (global.game_state) {
 
             var result = scr_check_answer(current_round, pending_input);
 
-            var combo_result = scr_combo_state(result, combo, timer_combo, max_timer);
+            var combo_result = scr_combo(result, combo, timer_combo, max_timer);
 
             combo = combo_result.combo_streak;
             _score += combo_result.score_increment;
