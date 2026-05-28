@@ -28,10 +28,13 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_top);
 draw_text(_x, y_title, title);
 
-var stats = 
-"Tempo da partida: " + string(final_time) + "\n" +
-"Pontos: " + string(final_score) +  "\n" +
-"Maior Combo da partida: " + string(final_combo);
+var stats =
+"Tempo da partida: " + string_format(final_time, 0, 2) + "s\n" +
+"Pontos: " + string(final_score) + "\n" +
+"Acertos: " + string(final_correct) + "\n" +
+"Erros: " + string(final_wrong) + "\n" +
+"Maior Combo: " + string(final_combo);
+
 
 draw_set_halign(fa_left);
 var line_h = string_height("A") + 25;

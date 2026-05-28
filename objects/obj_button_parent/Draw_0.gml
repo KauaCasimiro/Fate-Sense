@@ -35,11 +35,21 @@ if (controller.pending_input != undefined) {
     }
 }
 
+#region
 // =========================
 // DESENHAR BOX
 // =========================
+//draw_set_color(box_color);
+//draw_rectangle(x - 100, y - 50, x + 100, y + 50, false);
+#endregion
+
 draw_set_color(box_color);
-draw_rectangle(x - 100, y - 50, x + 100, y + 50, false);
+
+draw_roundrect_ext(x - 90, y - 90, x + 90, y + 90, 12, 12, false);
+
+if (is_struct(option) && variable_struct_exists(option, "sprite")) {
+	draw_sprite_ext(option.sprite, 0, x, y - 20, 2.5, 2.5, 0, c_white, 1);
+}
 
 // =========================
 // TEXTO
@@ -52,7 +62,7 @@ draw_set_font(fnt_hud);
 var text = "[" + string(option_index) + "]";
 
 if (is_struct(option) && variable_struct_exists(option, "name")) {
-    text += " " + string(option.name);
+    //text += " " + string(option.name);
+	draw_text(x, y + 70, text);
 }
 
-draw_text(x, y, text);

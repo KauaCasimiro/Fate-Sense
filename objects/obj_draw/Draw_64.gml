@@ -48,7 +48,27 @@ if (controller.current_round != undefined) {
 
     var prompt_text = controller.current_round.prompt;
 
-    draw_text(gw * 0.5, gh * 0.3, prompt_text);
+    draw_text(gw * 0.5, gh * 0.21, prompt_text);
+	
+	 var card = controller.current_round.correct_card;
+
+    var card_x = gw * 0.5;
+    var card_y = gh * 0.40;
+
+    // escala menor porque sprite é 128x128
+    var scale = 5;
+
+    draw_sprite_ext(
+        card.sprite,
+       0,
+        card_x,
+        card_y,
+        scale,
+        scale,
+        0,
+        c_white,
+        1
+    );
 }
 
 

@@ -43,3 +43,10 @@ session_current = 0;
 session_deck = scr_session_build_deck(session_total);
 
 
+global.run_state = {
+	time: 0,
+	_score: 0,
+	correct: 0,
+	wrong: 0,
+	combo_max: 0
+};

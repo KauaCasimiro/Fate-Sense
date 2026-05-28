@@ -13,9 +13,7 @@ options = [
 			with(obj_audio_manager) {
 			play_sfx(sfx_bnt_ui);
 		}
-			with(obj_controller) {
-				global.game_state = game_State.Transition;
-			}
+			scr_reset_run();
 		}
 	},
 	
@@ -30,11 +28,10 @@ options = [
 	}
 ];
 
-var controller = instance_find(obj_controller, 0);
+var results = scr_get_run_stats();
 
-if (controller != noone) {
-	var results = controller.get_run_results();
-	final_time = results.time;
-	final_score = results._score_;
-	final_combo = results.combo;
-}
+final_time = results.time;
+final_score = results._score;
+final_combo = results.combo_max;
+final_correct = results.correct;
+final_wrong = results.wrong;

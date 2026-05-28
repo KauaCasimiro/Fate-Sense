@@ -1,5 +1,5 @@
 var dt = delta_time / 1000000;
-
+global.run_state.time += dt;
 
 // =====================================================
 // STATE MACHINE
@@ -56,9 +56,11 @@ switch (global.game_state) {
 		    combo = combo_result.combo_streak;
 			combo_active = combo_result.combo_active;
 		    _score += combo_result.score_increment;
+			global.run_state._score = _score;
 			
 			if (combo > max_combo) {
 				max_combo = combo;
+				global.run_state.combo_max = max_combo;
 			}
 				
 		    //timer_combo = combo_result.timer_combo;
@@ -73,10 +75,16 @@ switch (global.game_state) {
 		    // SFX
 		    // =========================
 		    if (result) {
+				
+				global.run_state.correct ++;
+				
 		        with (obj_audio_manager) {
 		            play_sfx(sfx_bnt_game);
 		        }
 		    } else {
+				
+				global.run_state.wrong ++;
+				
 		        _lives--;
 
 		        with (obj_audio_manager) {

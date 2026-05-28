@@ -4,10 +4,11 @@ var my = device_mouse_y(0);
 // =========================
 // BOX
 // =========================
-var box_left   = x - 100;
-var box_right  = x + 100;
-var box_top    = y - 50;
-var box_bottom = y + 50;
+var box_left   = x - 120;
+var box_right  = x + 120;
+
+var box_top    = y - 160;
+var box_bottom = y + 160;
 
 // =========================
 // HOVER DETECTION
