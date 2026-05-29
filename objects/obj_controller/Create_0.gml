@@ -16,7 +16,7 @@ transition_timer = 0;
 transition_duration = 4;
 
 feedback_timer = 0;
-feedback_duration = 1.0
+feedback_duration = 2.0;
 
 round_timer = 0;
 
@@ -42,6 +42,10 @@ session_total = 5;
 session_current = 0;
 session_deck = scr_session_build_deck(session_total);
 
+center_card_sprite = spr_button_back;
+center_card_scale_x = 1;
+center_card_flipping = false;
+center_card_revealed = false;
 
 global.run_state = {
 	time: 0,

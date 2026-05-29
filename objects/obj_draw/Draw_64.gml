@@ -58,17 +58,7 @@ if (controller.current_round != undefined) {
     // escala menor porque sprite é 128x128
     var scale = 5;
 
-    draw_sprite_ext(
-        card.sprite,
-       0,
-        card_x,
-        card_y,
-        scale,
-        scale,
-        0,
-        c_white,
-        1
-    );
+    draw_sprite_ext(spr_button_back, 0, card_x, card_y, scale, scale, 0, c_white, 1);
 }
 
 
