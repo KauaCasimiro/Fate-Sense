@@ -58,3 +58,6 @@ switch (state) {
         }
     break;
 }
+
+    scr_feedback();
+

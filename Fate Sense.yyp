@@ -38,7 +38,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"Fate Sense",
   "resources":[
@@ -68,6 +68,7 @@
     {"id":{"name":"scr_cooldown","path":"scripts/scr_cooldown/scr_cooldown.yy",},},
     {"id":{"name":"scr_create_card","path":"scripts/scr_create_card/scr_create_card.yy",},},
     {"id":{"name":"scr_debug_round","path":"scripts/scr_debug_round/scr_debug_round.yy",},},
+    {"id":{"name":"scr_feedback","path":"scripts/scr_feedback/scr_feedback.yy",},},
     {"id":{"name":"scr_generate_question","path":"scripts/scr_generate_question/scr_generate_question.yy",},},
     {"id":{"name":"scr_get_run_stats","path":"scripts/scr_get_run_stats/scr_get_run_stats.yy",},},
     {"id":{"name":"scr_init_cards","path":"scripts/scr_init_cards/scr_init_cards.yy",},},

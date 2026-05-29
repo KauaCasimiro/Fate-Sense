@@ -45,10 +45,12 @@ if (controller.pending_input != undefined) {
 
 draw_set_color(box_color);
 
+var final_scale =  2.5 + hover_lerp * 0.2 + click_pulse;
+
 draw_roundrect_ext(x - 90, y - 90, x + 90, y + 90, 12, 12, false);
 
 if (is_struct(option) && variable_struct_exists(option, "sprite")) {
-	draw_sprite_ext(option.sprite, 0, x, y - 20, 2.5, 2.5, 0, c_white, 1);
+	draw_sprite_ext(option.sprite, 0, x + shake_x, y - 20 + shake_y - hover_lerp * 10, final_scale, final_scale, hover_lerp * 2, feedback_color, 1);
 }
 
 // =========================
